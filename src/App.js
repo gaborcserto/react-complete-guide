@@ -5,12 +5,12 @@ import UserOutput from "./UserOutput/UserOutput";
 
 class App extends Component {
     state = {
-        username:  'TestUser',
+        userName:  'TestUser',
     }
 
-    usernameHandler = event => {
+    userNameHandler = event => {
         this.setState({
-            username:  event.target.value
+            userName:  event.target.value
         })
     }
 
@@ -18,8 +18,8 @@ class App extends Component {
 
         const outputStyle = {
             border: '1px solid #eee',
-            margin: '0 auto',
-            padding: '16px',
+            margin: '0 auto 10px',
+            padding: '15px',
             width: '60%'
         }
 
@@ -27,10 +27,14 @@ class App extends Component {
             <div className="App">
                 <UserOutput
                     style={outputStyle}
-                    username={this.state.username}/>
+                    userName={this.state.userName}/>
+                <UserOutput
+                    style={outputStyle}
+                    userName="Name"
+                />
                 <UserInput
-                    username={this.state.username}
-                    changed={this.usernameHandler}/>
+                    userName={this.state.userName}
+                    changed={this.userNameHandler}/>
             </div>
         );
     }

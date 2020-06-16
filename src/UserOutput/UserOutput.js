@@ -6,7 +6,7 @@ const userOutput = props => {
 	return (
 		<div className="UserOutput"  style={props.style}>
 			<h2>Username:</h2>
-			<p>{props.username}</p>
+			<p>{props.userName}</p>
 		</div>
 	)
 }
