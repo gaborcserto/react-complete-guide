@@ -9,7 +9,7 @@
 .bold {
   font-weight: bold;
 }
-.button {
+.Button {
   background-color: green;
   border: 1px solid blue;
   color: white;
@@ -18,7 +18,15 @@
   padding: 8px;
 }
 
-.button:hover {
+.Button:hover {
   background-color:  lightgreen;
   color: black;
+}
+
+.Button.Red {
+  background-color: red;
+}
+
+.Button.Red:hover {
+  background-color: salmon;
 }
