@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import Person from "./Person/Person";
 
-class Persons extends Component {
+class Persons extends PureComponent {
 	// static getDerivedStateFromProps(props, state) {
 	// 	console.log('[Persons.js] getDerivedStateFromProps');
 	// 	return state;
@@ -12,7 +12,7 @@ class Persons extends Component {
 	// 	console.log('[Persons.js] componentWillReceiveProps', props);
 	// }
 
-	shouldComponentUpdate(nextProps, nextState, nextContext) {
+	/*shouldComponentUpdate(nextProps, nextState, nextContext) {
 		console.log('[Persons.js] shouldComponentUpdate');
 		// return nextProps.persons !== this.props.persons || nextProps.changed !== this.props.changed || nextProps.clicked !== this.props.clicked; Simplified way
 		if (
@@ -25,7 +25,7 @@ class Persons extends Component {
 			return false;
 		}
 		// return true;
-	}
+	}*/
 
 	getSnapshotBeforeUpdate(prevProps, prevState) {
 		console.log('[Persons.js] getSnapshotBeforeUpdate');
