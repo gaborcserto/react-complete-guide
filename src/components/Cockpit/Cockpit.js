@@ -6,11 +6,12 @@ const Cockpit = props => {
 	useEffect(() => {
 		console.log('[Cockpit.js] useEffect');
 		// Http request...
-		setTimeout(() => {
+		const timer = setTimeout(() => {
 			alert('Save data to cloud');
 		}, 1000)
 
 		return () => {
+			clearTimeout(timer);
 			console.log('[Cockpit.js] cleanup work in useEffect');
 		};
 	}, []); // if it empty never rerun :)
