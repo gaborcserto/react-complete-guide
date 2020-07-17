@@ -9,7 +9,18 @@ const Cockpit = props => {
 		setTimeout(() => {
 			alert('Save data to cloud');
 		}, 1000)
+
+		return () => {
+			console.log('[Cockpit.js] cleanup work in useEffect');
+		};
 	}, []); // if it empty never rerun :)
+
+	useEffect(() => {
+		console.log('[Cockpit.js] 2 useEffect');
+		return () => {
+			console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+		};
+	}); //
 
 	// useEffect()
 
